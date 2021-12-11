@@ -1,7 +1,7 @@
 #pragma once
 
 namespace bfc {
-	enum class token {
+	enum class Token {
 		INC_PTR,
 		DEC_PTR,
 		INC_BYTE,
@@ -9,6 +9,7 @@ namespace bfc {
 		PUTCHAR,
 		GETCHAR,
 		BEGIN_WHILE,
-		END_WHILE
+		END_WHILE,
+		NULL_TOKEN
 	};
 }

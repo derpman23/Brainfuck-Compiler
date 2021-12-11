@@ -1,9 +1,9 @@
 #pragma once
 
-#include<vector>
 #include<string>
+#include<vector>
 #include "Token.h"
 
 namespace bfc::lexer {
-	std::vector<token> tokenize(std::string data);
+	std::vector<bfc::Token> tokenize(std::string data);
 }

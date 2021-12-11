@@ -1,35 +1,33 @@
 #include "Lexer.h"
 
-std::vector<bfc::token> bfc::lexer::tokenize(std::string data) {
-	std::vector<bfc::token> tokens;
+std::vector<bfc::Token> bfc::lexer::tokenize(std::string data) {
+	std::vector<bfc::Token> tokens;
 
 	for (char c : data) {
 		switch (c) {
 		case '>':
-			tokens.push_back(bfc::token::INC_PTR);
+			tokens.push_back(bfc::Token::INC_PTR);
 			break;
 		case '<':
-			tokens.push_back(bfc::token::DEC_PTR);
+			tokens.push_back(bfc::Token::DEC_PTR);
 			break;
 		case '+':
-			tokens.push_back(bfc::token::INC_BYTE);
+			tokens.push_back(bfc::Token::INC_BYTE);
 			break;
 		case '-':
-			tokens.push_back(bfc::token::DEC_BYTE);
+			tokens.push_back(bfc::Token::DEC_BYTE);
 			break;
 		case '.':
-			tokens.push_back(bfc::token::PUTCHAR);
+			tokens.push_back(bfc::Token::PUTCHAR);
 			break;
 		case ',':
-			tokens.push_back(bfc::token::GETCHAR);
+			tokens.push_back(bfc::Token::GETCHAR);
 			break;
 		case '[':
-			tokens.push_back(bfc::token::BEGIN_WHILE);
+			tokens.push_back(bfc::Token::BEGIN_WHILE);
 			break;
 		case ']':
-			tokens.push_back(bfc::token::END_WHILE);
-			break;
-		default:
+			tokens.push_back(bfc::Token::END_WHILE);
 			break;
 		}
 	}
