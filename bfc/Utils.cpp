@@ -1,6 +1,6 @@
 #include "Utils.h"
 
-Arguments::Arguments(int argc, char** argv) {
+bfc::Arguments::Arguments(int argc, char** argv) {
 	bool bf_set = false;
 
 	for (int i = 1; i < argc; i++) {
@@ -59,7 +59,7 @@ Arguments::Arguments(int argc, char** argv) {
 	}
 }
 
-std::string read_file(fs::path path) {
+std::string bfc::read_file(fs::path path) {
 	std::string data = "", s;
 
 	std::ifstream in(path);
@@ -74,7 +74,7 @@ std::string read_file(fs::path path) {
 	return data;
 }
 
-void write_file(fs::path path, std::string data) {
+void bfc::write_file(fs::path path, std::string data) {
 	std::ofstream out(path);
 
 	if (out.is_open()) {
